@@ -43,7 +43,7 @@ fun main(args: Array<String>){
     //interestingThings.listIterator(0)
     */
 
-    val interestingProgrammingLanguages = mapOf(1 to "Java", 2 to "C#", 3 to "Kotlin", 4 to "Clojure", 5 to "Elixir")
+    val interestingProgrammingLanguages = mutableMapOf(1 to "Java", 2 to "C#", 3 to "Kotlin", 4 to "Clojure", 5 to "Elixir")
 
     //interestingProgrammingLanguages.forEach { key, value -> println("$key -> $value")}
     interestingProgrammingLanguages.forEach { (key, value) -> println("$key -> $value")}
@@ -58,14 +58,11 @@ fun main(args: Array<String>){
     println(interestingProgrammingLanguages.isNotEmpty())               //true
     println(interestingProgrammingLanguages.isNullOrEmpty())            //false
 
-    println(interestingProgrammingLanguages.get(1))
-    println(interestingProgrammingLanguages[2])
-    println(interestingProgrammingLanguages.entries)
-    println(interestingProgrammingLanguages.keys)
-    println(interestingProgrammingLanguages.values)
-    println(interestingProgrammingLanguages.containsKey(0))
-    println(interestingProgrammingLanguages.containsValue("PHP"))
-    println(interestingProgrammingLanguages.isNotEmpty())
-    println(interestingProgrammingLanguages.isNullOrEmpty())
+    //interestingProgrammingLanguages.put(6, "C++")
+    interestingProgrammingLanguages[6] = "C++"
+
+    println(interestingProgrammingLanguages.containsKey(6))             //true
+    println(interestingProgrammingLanguages.containsValue("C++"))       //true
+    println(interestingProgrammingLanguages[6])                         //C++
 
 }
