@@ -57,4 +57,15 @@ fun main(args: Array<String>){
     println(interestingProgrammingLanguages.containsValue("PHP"))       //false
     println(interestingProgrammingLanguages.isNotEmpty())               //true
     println(interestingProgrammingLanguages.isNullOrEmpty())            //false
+
+    println(interestingProgrammingLanguages.get(1))
+    println(interestingProgrammingLanguages[2])
+    println(interestingProgrammingLanguages.entries)
+    println(interestingProgrammingLanguages.keys)
+    println(interestingProgrammingLanguages.values)
+    println(interestingProgrammingLanguages.containsKey(0))
+    println(interestingProgrammingLanguages.containsValue("PHP"))
+    println(interestingProgrammingLanguages.isNotEmpty())
+    println(interestingProgrammingLanguages.isNullOrEmpty())
+
 }
