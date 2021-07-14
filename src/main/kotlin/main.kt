@@ -1,10 +1,11 @@
 
-fun getGreeting(): String {
-    return "Hello, Kotlin!"
+fun getGreeting(name: String = "Stranger"): String {
+    return "Hello, $name!"
 }
 
-fun sayHello() = println(getGreeting())
+// fun sayHello(name: String) = println(getGreeting(name))
+fun sayHello(name: String) = println(getGreeting())
 
 fun main(args: Array<String>){
-    sayHello()
+    sayHello(args[0])
 }
