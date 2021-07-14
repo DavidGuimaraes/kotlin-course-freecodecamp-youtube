@@ -27,8 +27,8 @@ fun main(args: Array<String>){
     }
     */
 
-    /*
-    val interestingThings = listOf("Programming", "Kotlin", "Java", "Java", "C#")
+
+    val interestingThings = mutableListOf("Programming", "Kotlin", "Java", "Java", "C#")
 
     println(interestingThings.size)                             //5
     println(interestingThings[0])                               //Programming
@@ -41,8 +41,15 @@ fun main(args: Array<String>){
     println(interestingThings.last())                           //C#
     //println(interestingThings.listIterator(0))
     //interestingThings.listIterator(0)
-    */
 
+    interestingThings.add("C++")
+    println(interestingThings.size)                             //6
+    println(interestingThings[5])                               //C++
+    println(interestingThings.indexOf("C++"))                   //5
+    println(interestingThings.last())                           //C++
+
+
+    /*
     val interestingProgrammingLanguages = mutableMapOf(1 to "Java", 2 to "C#", 3 to "Kotlin", 4 to "Clojure", 5 to "Elixir")
 
     //interestingProgrammingLanguages.forEach { key, value -> println("$key -> $value")}
@@ -64,5 +71,6 @@ fun main(args: Array<String>){
     println(interestingProgrammingLanguages.containsKey(6))             //true
     println(interestingProgrammingLanguages.containsValue("C++"))       //true
     println(interestingProgrammingLanguages[6])                         //C++
+    */
 
 }
