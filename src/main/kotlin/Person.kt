@@ -42,4 +42,17 @@ class Person(_firstName: String, _lastName: String) {
 }
 */
 
-class Person(val firstName: String, val lastName: String)
+class Person(val firstName: String, val lastName: String) {
+
+    init {
+        println("First init block")                 //This is going to be printed out first
+    }
+
+    init {
+        println("Second init block")                //This is going to be printed out right after the first one
+    }
+
+    constructor(): this("David", "Guimaraes") {     //This is called the second constructor. Printed out after all init blocks
+        println("Secondary constructor")
+    }
+}
