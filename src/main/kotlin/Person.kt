@@ -60,8 +60,8 @@ class Person(val firstName: String, val lastName: String) {
 */
 
 
-class Person(_firstName: String, _lastName: String) {
-    var firstName: String = _firstName
+internal class Person(_firstName: String, _lastName: String) {
+    protected var firstName: String = _firstName
         // get() = firstName
         private set(value) {
             field = value
