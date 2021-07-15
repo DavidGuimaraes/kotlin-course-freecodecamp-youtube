@@ -42,6 +42,7 @@ class Person(_firstName: String, _lastName: String) {
 }
 */
 
+/*
 class Person(val firstName: String, val lastName: String) {
 
     init {
@@ -56,3 +57,21 @@ class Person(val firstName: String, val lastName: String) {
         println("Secondary constructor")
     }
 }
+*/
+
+
+class Person(_firstName: String, _lastName: String) {
+    var firstName: String = _firstName
+        // get() = firstName
+        private set(value) {
+            field = value
+        }
+
+    var lastName = _lastName
+        private set(value) {
+            field = value
+        }
+}
+
+
+// class Person(var _firstName: String, var lastName: String)
