@@ -1,76 +1,21 @@
 
+/*
+fun printMainProgrammingLanguages(programmingLanguages: List<String>) {
+    programmingLanguages.forEach { println(it) }
+}
+*/
+
+fun printMainProgrammingLanguages(vararg programmingLanguages: String) {
+    programmingLanguages.forEach { println(it) }
+}
 
 fun main(args: Array<String>){
-    // val interestingThings = arrayOf("Programming", "Kotlin", "Java", "C#")
+    val myMainProgrammingLanguages = listOf("Java", "C#", "Kotlin")
+    //printMainProgrammingLanguages() //Throws an error as long as the parameter is the type of List<String>
+    //printMainProgrammingLanguages(myMainProgrammingLanguages)     //As long as the vararg is used, this does not work
+    printMainProgrammingLanguages()   //Does not throw an error anymore, since the 'vararg' is used
+    printMainProgrammingLanguages("Clojure", "Scala", "Elixir")     //The vararg treats all these arguments as an array
 
-    // println(interestingThings.size)
-    // println(interestingThings[0])
-    // println(interestingThings.get(0))
-
-    /*
-    for (interestingThing in interestingThings) {
-        println(interestingThing)
-    }
-    */
-
-    // interestingThings.forEach { println(it) }
-
-    /*
-    interestingThings.forEach { interestingThing ->
-        println(interestingThing)
-    }
-    */
-
-    /*
-    interestingThings.forEachIndexed { index, interestingThing ->
-        println("$interestingThing is at index $index")
-    }
-    */
-
-
-    val interestingThings = mutableListOf("Programming", "Kotlin", "Java", "Java", "C#")
-
-    println(interestingThings.size)                             //5
-    println(interestingThings[0])                               //Programming
-    println(interestingThings.get(0))                           //Programming
-    println(interestingThings.indexOf("Kotlin"))                //1
-    //println(interestingThings.listIterator())
-    //val iterator = interestingThings.listIterator()
-    println(interestingThings.lastIndexOf("Java"))      //3
-    println(interestingThings.subList(1, 4))                    //[Kotlin, Java, Java]
-    println(interestingThings.last())                           //C#
-    //println(interestingThings.listIterator(0))
-    //interestingThings.listIterator(0)
-
-    interestingThings.add("C++")
-    println(interestingThings.size)                             //6
-    println(interestingThings[5])                               //C++
-    println(interestingThings.indexOf("C++"))                   //5
-    println(interestingThings.last())                           //C++
-
-
-    /*
-    val interestingProgrammingLanguages = mutableMapOf(1 to "Java", 2 to "C#", 3 to "Kotlin", 4 to "Clojure", 5 to "Elixir")
-
-    //interestingProgrammingLanguages.forEach { key, value -> println("$key -> $value")}
-    interestingProgrammingLanguages.forEach { (key, value) -> println("$key -> $value")}
-
-    println(interestingProgrammingLanguages.get(1))                     //Java
-    println(interestingProgrammingLanguages[2])                         //C#
-    println(interestingProgrammingLanguages.entries)                    //[1=Java, 2=C#, 3=Kotlin, 4=Clojure, 5=Elixir]
-    println(interestingProgrammingLanguages.keys)                       //[1, 2, 3, 4, 5]
-    println(interestingProgrammingLanguages.values)                     //[Java, C#, Kotlin, Clojure, Elixir]
-    println(interestingProgrammingLanguages.containsKey(0))             //false
-    println(interestingProgrammingLanguages.containsValue("PHP"))       //false
-    println(interestingProgrammingLanguages.isNotEmpty())               //true
-    println(interestingProgrammingLanguages.isNullOrEmpty())            //false
-
-    //interestingProgrammingLanguages.put(6, "C++")
-    interestingProgrammingLanguages[6] = "C++"
-
-    println(interestingProgrammingLanguages.containsKey(6))             //true
-    println(interestingProgrammingLanguages.containsValue("C++"))       //true
-    println(interestingProgrammingLanguages[6])                         //C++
-    */
-
+    val test = arrayOf("One Things", "Another Thing")
+    printMainProgrammingLanguages(*test)    //Using the spread operator (*) we can pass an array as parameter, since the vararg treats everything as array
 }
